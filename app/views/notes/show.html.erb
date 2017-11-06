@@ -1,0 +1,8 @@
+<p>
+  Your note is ready.<br>
+  Share link:<br>
+<%= link_to "#{@note.auth_token}"%><br>
+<button class="clipboard-btn" data-clipboard-action="copy" data-clipboard-target="#address">
+  Copy to clipboard
+</button>
+</p>

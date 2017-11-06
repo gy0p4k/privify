@@ -1,0 +1,17 @@
+<h1>Listing notes</h1>
+<h3>This is only available for testing purposes.</h3>
+
+<table>
+  <tr>
+    <td><strong>id</strong></td>
+    <td><strong>text</strong></td>
+    <td><strong>auth token</strong></td>
+  </tr>
+  <% @notes.each do |note| %>
+  <tr>
+    <td><%= note.id %></td>
+    <td><%= note.text %></td>
+    <td><%= note.auth_token %></td>
+  </tr>
+  <% end %>
+</table>
