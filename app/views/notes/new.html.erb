@@ -1,12 +1,10 @@
 <%= stylesheet_link_tag "notes" %>
 <%= form_with scope: :note, url: notes_path, local: true do |form| %>
 
-    <p>
-      <%= form.label 'new note' %><br>
-      <%= form.text_area :text %>
-    </p>
+	<div class="container">
+		<p class="text"><%= form.label 'Message anonymously' %><br></p>
+      	<div class="input"><%= form.text_area :text %></div>
+    	<div class="button"><%= form.submit 'Privify it' %></div>
+	</div>
 
-    <p>
-      <%= form.submit 'Create note' %>
-    </p>
 <% end %>
