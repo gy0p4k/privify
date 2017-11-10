@@ -1,8 +1,17 @@
-<p>
-  Your note is ready.<br>
-  Share link:<br>
-<%= link_to "#{@note.auth_token}"%><br>
-<button class="clipboard-btn" data-clipboard-action="copy" data-clipboard-target="#address">
-  Copy to clipboard
-</button>
-</p>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Privify</title>
+</head>
+<body>
+	<%= stylesheet_link_tag "notes" %>
+	<div class="container">
+		<p class="text">Your note is ready.<p>
+		<p class="text">Share link:</p>
+		<p class="link_container"><%= link_to "#{@note.auth_token}", data: {confirm: "Are you sure?"}%><p>	
+		<button class="copy_button" data-clipboard-action="copy" 	data-clipboard-target="#address">
+  		Copy to clipboard
+		</button>
+	</div>
+</body>
+</html>
